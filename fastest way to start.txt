@@ -1,0 +1,128 @@
+Create repostory in GitHub.
+
+Clone or Downloadbutton in GitHub, and copy the code from textbox.
+
+start bash terminal, and enter the commands in order
+
+git config --global user.name FrostyDesigner
+
+git clone https://github.com/FrostyDesigner/<reponame>.git
+
+example: git clone https://github.com/FrostyDesigner/sakurakan.git
+
+Open the new created folder in Visual Studio Code.
+
+start bash terminal, make sure its location is in the new folder.
+
+npm init
+
+npm install lite-server@2.3 --save-dev
+
+npm install bootstrap@4.0.0
+
+npm install jquery@3.3.1 popper.js@1.12.9
+
+    You will probably see some warnings and notices about newer versions. You can safely ignore them. 
+    NOTE: the --save-dev flag means that lite-server is being installed as a development dependency, 
+    which means that later, when you build your project for deployment, it will not be included in 
+    the final build files, since it is only needed during development. 
+
+npm install font-awesome@4.7.0
+
+npm install bootstrap-social@5.1.1
+
+edit package.json similar to below
+
+{
+  "name": "sakurakan",
+  "version": "1.0.0",
+  "description": "website design for a local judo club and its members",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrostyDesigner/sakurakan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FrostyDesigner/sakurakan/issues"
+  },
+  "homepage": "https://github.com/FrostyDesigner/sakurakan#readme"
+}
+
+npm start
+
+********************************************
+If Using the Sass compiler...
+
+Install the Sass compiler
+Next, use NPM to install a sass compiler. Type the following into your bash terminal from inside your project folder.
+
+npm install --save-dev node-sass@4.12.0
+
+
+Add compilation script to package.json
+Open your package.json file in VS Code, and add the following line into the scripts object there. This script makes use of the node-sass utility to compile the .scss  file into a .css  file:
+
+"scss": "node-sass -o css/ css/"
+
+Make sure that you add a comma to the end of the line above it (unless you add this as the very first line in the scripts object).
+
+
+Run the SCSS compiler
+If you want to save your previous .css file, this would be a good time to move it somewhere else, or rename it something like styles.css.old. This is not a required step, but you may like to do so just to be safe.
+
+Now in order to compile the .scss file to a .css file using the script you defined previously, type the following at the prompt:
+
+npm run scss
+
+This should have now created a new styles.css file in your css folder. If you saved a backup of your old styles.css file, you should be able to compare it and see that they are the same. 
+
+***************************************
+If Watching for Changes and Parallelshell
+
+npm install --save-dev onchange@3.3.0 parallelshell@3.0.2
+
+Add the following two scripts to the script object in package.json.
+
+. . .
+   "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+  },
+. . .
+
+Update the start script as follows:
+
+    "start": "npm run watch:all",
+
+Then, type the following at the prompt to start watching for changes to the Sass file, compile it to CSS, and run the server:
+
+npm start
+
+At this point, you may run into a bug with parallelshell that mentions an issue with "options.cwd". If this happens to you, then reinstall parallelshell to the previous version with this command: 
+
+npm install --save-dev parallelshell@3.0.1
+
+Then run npm start again.
+
+Now, whenever you make any changes to styles.scss file, it will automatically be compiled to the corresponding .css file. 
+
+You can test this by making a small change to your styles.scss file, and you'll be able to see the recompilation happen in real time. 
+
+****************************************************
+
