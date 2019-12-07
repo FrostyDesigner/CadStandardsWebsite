@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>A&B Drafting Standards</h1>
+
+  <button class="accordion">Version Standards</button>
+  <div class="panel">
+    <button class="accordion">Revision Delta</button>
+    <div class="panel">
+      <ol>
+        <li>1. All changes made to drawings have to be clouded and noted with Version triangle. Exception to this rule
+          is
+          Version A and 0.</li>
+        <ol type="a">
+          <li>Version Triangle has to touch Version cloud in all instances.</li>
+          <li>Cloud only immediate area of the change. If clouding will constrain visibility, readability and clarity of
+            information due to many smaller clouds, exception of one larger cloud is permitted.</li>
+          <li>If two or more clouds are spaced closely so one Version triangle can touch all of them, usage of one
+            Version
+            triangle instead of more is permitted.</li>
+          <li>Version Triangle needs to match Version in the Versions box in the Title Block as well as Version Tag in
+            the
+            Title Block. </li>
+          <li>Drawings receive a new Version every single time we perform a hand-off.</li>
+        </ol>
+        <li>2. Versions are noted as Letters and Numbers. Letter Versions represent all Versions before drawings get
+          Issued</li>
+        for Fabrication and Number Versions represent all Versions Issued to Fabrication.
+        <li>3. Version Clouds and Version Triangles reside in Paper Space.</li>
+        <li>4. Version Triangle shall reside in upper right corner of the cloud unless not permitted by drawings
+          objects.</li>
+        <li>5. Version Triangle shall not interfere with the drawing, dimensions and/or anno objects (section cuts, CL
+          callouts), it should be in the clear part of the drawing for easier Version recognition.</li>
+        <li>6. All changes made to Title Block and Version Block are not to be clouded, regardless of the change type.
+        </li>
+      </ol>
+    </div>
+
+    <button class="accordion">Published Drawing Naming Convention</button>
+    <div class="panel">
+      <ol>
+        <li>7. Naming of PDF in Drawing File Directory will always be consistent. Example of Correct naming convention
+          would
+          be: JOB NUMBER JOB NAME VERSION – DRAWING NAME DATE
+          For example:
+          1764 5th & Columbia Rev 0 – Issued for Fabrication 20180724</li>
+        <li>8. Clouds are allowed to be broken if they interfere with Title Block or Drawing Objects.</li>
+        <li>9. Approved PDF naming and Version naming needs to stay consistent for easier recognition.
+          <p> Examples of approved naming are:</p>
+          <ul>
+            <li>Issued for First (Second, Third etc) Review (Is sent to Engineer, Project Manager for review)</li>
+            <li>Issued for Preliminary Field Measurements (Is sent to field for field measures)</li>
+            <li>Issued for Fabrication (Is Issued for Fabrication)</li>
+        </li>
+        </ul>
+        <li>10. Versions that came after Version 0 will receive “-Revision” at end.
+          <p> For example, of PDF naming:</p>
+          <ul>
+            <li>1764 5th & Columbia Rev 1 Issued for Fabrication – Revision 20181212</li>
+          </ul>
+          <ul>
+            <p>This rule only applies for Numbered Versions, lettered Versions in between numbered Versions will
+              not receive “-Revision” at end. They will however carry Numbered and Lettered Version. For example:</p>
+            <li>1764 5th & Columbia Rev 0A – Issued for First Review 20180913</li>
+            <li>1764 5th & Columbia Rev 0B – Issued for Second Review 20181023</li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+
+
+    <button class="accordion">Clouding Standards</button>
+    <div class="panel">
+      <ol>
+        <li>11. Clouding of Lettered and Numbered Versions will be as follows. At every single lettered and numbered
+          Version,
+          it is required to cloud the changes. For example: At Version 0A we’ll cloud changes made to rev 0. At Version
+          0B,
+          we will freeze 0A clouds and cloud changes made to Version 0A and so on. At time of Version 1, we will
+          unfreeze
+          all clouds and change all rev triangles to 1. In doing so, we’re controlling changes made from 0 to 1 and will
+          be
+          able to know at exactly which point change was made.</li>
+        <li>12. Title sheet is to be reved up with every single Version. In case of multiple Table of Contents, every
+          single
+          one is to be included but only reved up if sheets on that particular Table of Contents sheet are reving up.
+          Otherwise, Table of Contents sheet is to be included at previous Version if no changes to it.</li>
+        <li>13. If new sheet is added at any Version after 0, it will be given a starting Version of “A” and at any next
+          submittal it will have Version 0, even if entire project is at Version 4, for example.</li>
+        <li>14. Version cloud inside another Version cloud is not permitted.</li>
+        <li>15. Overlapping Version Clouds are not permitted.</li>
+        <li>16. Command “DCLO” is to be used instead of “REVCLOUD”.</li>
+        <li>17. For Table of Contents;
+          a. Adding and Removal of the sheets cloud whole line including sheet number, title, version and version issue
+          date.
+          b. Changes made to sheets will be reflected by clouding Version # & Version Issue Date.</li>
+        <li>18. All sheets are to be Revved up during Lettered Versions as well as Letter-Number Combo Versions such as
+          0A, 0B
+          etc. Only sheets that were affected by a change are to be Revved up during Numbered Versions.</li>
+        <li>19. Do not leave empty clouds on the drawing.</li>
+      </ol>
+    </div>
+    </p>
+  </div>
+
+  <button class="accordion">General drafting Standards</button>
+  <div class="panel">
+    <ol>
+
+      <li>1. All Annotative objects including Dimensions shall reside in Model Space. Paper space is reserved for
+        Clouding. <span class="red"><strong>[What about section and detail callouts?]</strong></span</li>
+      <li>2. Drawings are to be purged and zoomed to the extents before closing.</li>
+      <li>3. All submittals are to be sent in form of PDF.</li>
+      <li>4. A Leader line cannot be broken, it has to be continuous and at an angle. It cannot be straight. Best
+        practice is
+        45 degrees.</li>
+      <li>5. Text Leader need to have left and right attachment of “Middle of Top Line” and be at the same scale as
+        dimensions.</li>
+      <li>6. Text Leader cannot intersect with dimensions. It needs to be clear where leader is pointing to.</li>
+      <li>7. All viewports are to be placed on a “.NoPlotViewportBorder” layer.</li>
+      <li>8. Layers are not to be forced (all attributes such as color, line type, line thickness and such) are to be
+        controlled from layer manager not individually on the ribbon.</li>
+      <li>9. Every single detail view needs to have a reference point. Exception to this rule are initial Plan views.
+      </li>
+      <li>10. Sheet Set, Drawings, Revit files as well as any drafting objects need to be placed in common place for
+        easier
+        access.</li>
+      <li>11. Use Multi Leader which will have all info preset instead of Leader which does not.</li>
+      <li>12. All text including text inside dimensions needs to be the same size.</li>
+      <li>13. After completion of a Version, attach latest Version PDF to Smartsheet.</li>
+      <li>14. Layer naming needs to start with prefix “AB”.</li>
+      <li>15. Layer naming needs to be consistent with object it is on. Naming needs to be clear and explanatory of the
+        object. For example, AB-TopRail, AB-BasePlate, AB-Post.</li>
+      <li>16. All Work is to be backed up onto an extra drive for protection of information.</li>
+      <li>17. Dimension precision is to be set to minimum of 1/32”. Anything larger than 1/32” is
+        unacceptable. <span class="red"><strong>[What about field or submittal drawings?]</strong></span></li>
+      <li>18. While pointing at an edge regular leader is to be used, while pointing to a general area integral leader
+        is to
+        be used.</li>
+      <li>19. During marking up process one is to use 3 different colors to signify the need for change.
+        <ul>
+          <li class="green">Green marker/pen is used for all items that need to be removed from the project. </li>
+          <li class="red">Red marker/pen is used for all items with a mistake.</li>
+          <li class="blue">Blue marker/pen is used for suggestions, items that are not wrong but should be addressed.
+          </li>
+        </ul>
+      </li>
+      <li>20. Drawing should never contain PDF imported objects as well as Revit exported objects. It will cause
+        slowdowns and
+        errors in drawings.</li>
+      <li>21. For Revit based CAD drawings VISRETAIN command should be set up to 1. VISRETAIN variable 1 will allow you
+        to
+        control layers and will retain them as you save. VISRETAIN variable 0 will revert to layer states in xref file.
+      </li>
+      <li>22. General Notes are always placed in upper right corner. Keyed Notes are always placed below
+        General Notes. <span class="red"><strong>[General Notes? Keyed Notes?]</strong></span>
+      </li>
+      <li>23. General Notes are lowercase lettered while Keyed Notes are numbered. <span class="red"><strong>[General
+            Notes? Keyed Notes?]</strong></span></li>
+      <li>24. General Notes are explanatory of entire sheet that they’re placed on, while Keyed Notes have
+        to be called out on area they’re pertaining to. <span class="red"><strong>[General Notes? Keyed
+            Notes?]</strong></span></li>
+      <li>25. A self-check is to be performed prior to an any internal and external submittal. Print out a set of
+        drawings
+        when you’re done with them, mark them up. Pick up the marks, make new PDF and do a double check that all markups
+        are
+        picked up before printing a set for a Cross Check review.</li>
+      <li>26. For Konika Minolta, uncheck double-sided printing. Install a special Konika Minolta driver.</li>
+      <li>27. Crossing of Dimensions shall be avoided for clarity of information.</li>
+      <li>28. Letter “I” shall not be used as prefix for general notes nor any markings due to confusion
+        with Number 1. <span class="red"><strong>[What about letters "O", "Q" or "S"?]</strong></span>
+      </li>
+      <li>29. In crowded drawings use Section Cut Symbol without handles.</li>
+      <li>30. For dimensions use 2 decimal places while for angled dimensions use 3 decimal places.</li>
+      <li>31. Use 18x24 Cover Sheet & 18x24 Land Sheet Layouts for Drafting. 11x17 may be used for Single Files, while
+        8.5x11 may be used for single details.</li>
+      <li class="red">32. Every PDF sent out of Drafting Department shall have Proper Name and Date as per Version
+        Standard 7 & 9.
+      </li>
+      <li>33. DWG file naming needs to be consistent and easy to recognize.
+        <ul>
+          <li>Example of correct file naming: 1814 Block 21 Stair 11 – Submittal <span
+              class="red"><strong>[.dwg?]</strong></span></li>
+          <li>Example of incorrect file naming: Block 21 Drawing</li>
+        </ul>
+      </li>
+      <li>34. DWG naming needs to contain either Submittal or Asbuilts in its name.
+        <ul>
+          <li>For Example: 1814 Block 21 Stair 11 – Submittal <span class="red"><strong>[.dwg?]</strong></span>/ 1814
+            Block 21 Stair 11 – Asbuilts<span class="red"><strong>[.dwg?]</strong></span></li>
+        </ul>
+      </li>
+      <li>35. Project Change Tracker Excel Spreadsheet is to be filled out prior to initial design and prior to any
+        change to
+        a drawing.</li>
+      <li>36.
+        <ul>
+          <li>4” Diameter Circle to be shown on all guardrail drawings as representation of code understanding. </li>
+          <li>6” Diameter Circle to be shown on all stairs. </li>
+          <li>For cantilevered stairs be sure to check 6” dia code is met at each angle.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+
+  <button class="accordion">Revit Drafting Standards</button>
+  <div class="panel">
+    <ol>
+      <li>1. Revit Section views are to be exported to AutoCAD in 2D or 3D style. Revit files are not to be imported
+        into
+        CAD.</li>
+      <li>2. Large CAD files exported from Revit are not to be imported to CAD. Creation of “2D Flatshot” is needed in
+        this
+        case.</li>
+      <li>3. Revit exported files are to be loaded into separate drawing due to need of usage of CTB instead of STB.
+        This is
+        due Revit capabilities of only controlling layers thru color.</li>
+      <li>4. Revit exported files are to be kept separate from regular CAD files for clarity of information.</li>
+      <li>5. Unit precision needs to be set to minimum of 1/32”. Anything larger is unacceptable.</li>
+    </ol>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

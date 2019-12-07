@@ -1,0 +1,12 @@
+Week 5 - Week 9 Project
+
+Objective:
+You are a software developer at a company and you have been tasked with updating the company business rules to a modern format which can be consumed by any device and does not require a propriety application to view.
+
+Problem:
+A company is growing faster than they projected. Newly hired employees, (defined as 0 - 6 months), make up over 40% of the employee pool.  They are having problems following company business rules and productivity and quality control are suffering. There are several reasons for the knowledge gap.
+1. Company standards are "Tribal Knowledge", or information that has been passed down but not documented.
+2. Company standards exists in multiple formats. Some employees refer to pdf's some to Microsoaft Word docs, some refer to Microsoft Power Point, and some employees refer to an older SharePoint application.
+3. While there are multiple sources for company business rules, there is not  a cpmplete set, employess must reference several sources.
+4. There are multiple versions or revisions of the company business rules and  the version is not declared. Different employees can be looking at the same business rule document, yet follow different rules because the document has not been revised updated. 
+5. Every revision has to be distributed or redistributed at every revision. It is often not clear which employee in which department has the latest business rules.
