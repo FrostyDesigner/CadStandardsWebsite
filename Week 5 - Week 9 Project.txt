@@ -1,6 +1,6 @@
-Week 5 - Week 9 Project
+Week 9 - Week 13 Project
 
-Objective:
+Exercise:
 You are a software developer at a company and you have been tasked with updating the company business rules to a modern format which can be consumed by any device and does not require a propriety application to view.
 
 Problem:
@@ -10,3 +10,10 @@ A company is growing faster than they projected. Newly hired employees, (defined
 3. While there are multiple sources for company business rules, there is not  a cpmplete set, employess must reference several sources.
 4. There are multiple versions or revisions of the company business rules and  the version is not declared. Different employees can be looking at the same business rule document, yet follow different rules because the document has not been revised updated. 
 5. Every revision has to be distributed or redistributed at every revision. It is often not clear which employee in which department has the latest business rules.
+
+Objective:
+Week 9:
+Create 3 different web pages that host the original content. 
+The first page is called original_content.html, it contains content only without  any styling. 
+The second page is called original_styled.html, it contains original content and styling. 
+The third page is called accordion.html, it has the original content arranged in sections that make sense. The layout sould use accordian styling. 
