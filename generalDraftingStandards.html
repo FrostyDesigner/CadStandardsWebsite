@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <title>Aluminum & Bronze Fabricators</title>
+</head>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <a href="index.html"><img src="img/ab_logo.gif" class="img-fluid" /></a>
+                </div>
+                <div class="col">
+                    <h1>Aluminum & Bronze Fabricators</h1>
+                    <h2>Engineering Department Drafting Standards</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/ab_logo.gif" height="30" width="30" /></a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
+                            About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sites.html"><i class="fa fa-list fa-lg"></i>
+                            Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
+                                class="fa fa-address-card fa-lg"></i>
+                            Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle fa-lg"></i>
+                            FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Drafting Standards
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="versionStandards.html"><i class="fa fa-book fa-lg"></i>Version Standards</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-book fa-lg"></i>General Drafting Standards</a>
+                            <a class="dropdown-item" href="revitDraftingStandards.html"><i class="fa fa-book fa-lg"></i>Revit Drafting Standards</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <span class="navbar-text ml-auto">
+                    <a id="loginButton">
+                        <i class="fa fa-sign-in"></i> Login</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login </h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword"
+                                        placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col - 12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">General Drafting Standards</li>
+                </ol>
+                <hr />
+            </div>
+        </div>
+
+        <h1>A&B Drafting Standards</h1>
+        <h2>Content has not been altered, but order has been shuffled. </h2>
+        <button class="accordion">Version Standards</button>
+        <div class="panel">
+            <button class="accordion">Revision Delta</button>
+            <div class="panel">
+                <ol>
+
+                    <li>All changes made to drawings have to be clouded and noted with Version triangle. Exception to
+                        this rule
+                        is Version A and 0.
+                        <ol type="a">
+                            <li>Version Triangle has to touch Version cloud in all instances.</li>
+                            <li>Cloud only immediate area of the change. If clouding will constrain visibility,
+                                readability and clarity
+                                of
+                                information due to many smaller clouds, exception of one larger cloud is permitted.</li>
+                            <li>If two or more clouds are spaced closely so one Version triangle can touch all of them,
+                                usage of one
+                                Version
+                                triangle instead of more is permitted.</li>
+                            <li>Version Triangle needs to match Version in the Versions box in the Title Block as well
+                                as Version Tag in
+                                the
+                                Title Block. </li>
+                        </ol>
+                    </li>
+                    <li>Drawings receive a new Version every single time we perform a hand-off.</li>
+                    <li>Versions are noted as Letters and Numbers. Letter Versions represent all Versions before
+                        drawings get
+                        Issued</li>
+                    for Fabrication and Number Versions represent all Versions Issued to Fabrication.
+                    <li>Version Clouds and Version Triangles reside in Paper Space.</li>
+                    <li>Version Triangle shall reside in upper right corner of the cloud unless not permitted by
+                        drawings
+                        objects.</li>
+                    <li>Version Triangle shall not interfere with the drawing, dimensions and/or anno objects (section
+                        cuts, CL
+                        callouts), it should be in the clear part of the drawing for easier Version recognition.</li>
+                    <li>All changes made to Title Block and Version Block are not to be clouded, regardless of the
+                        change type.
+                    </li>
+                    <li>Letter “I” shall not be used as prefix for general notes nor any markings due to confusion
+                        with Number 1. <span class="red"><strong>[What about letters "O", "Q" or "S"?]</strong></span>
+                    </li>
+            </div>
+            </ol>
+
+            <button class="accordion">Published Drawing Naming Convention</button>
+            <div class="panel">
+                <ol>
+                    <li>Naming of PDF in Drawing File Directory will always be consistent. Example of Correct naming
+                        convention
+                        would
+                        be: JOB NUMBER JOB NAME VERSION – DRAWING NAME DATE
+                        For example:
+                        1764 5th & Columbia Rev 0 – Issued for Fabrication 20180724</li>
+                    <li>Approved PDF naming and Version naming needs to stay consistent for easier recognition.
+                        <p> Examples of approved naming are:</p>
+                        <ul>
+                            <li>Issued for First (Second, Third etc) Review (Is sent to Engineer, Project Manager for
+                                review)</li>
+                            <li>Issued for Preliminary Field Measurements (Is sent to field for field measures)</li>
+                            <li>Issued for Fabrication (Is Issued for Fabrication)</li>
+                    </li>
+                    </ul>
+                    <li>Versions that came after Version 0 will receive “-Revision” at end.
+                        <p> For example, of PDF naming:</p>
+                        <ul>
+                            <li>1764 5th & Columbia Rev 1 Issued for Fabrication – Revision 20181212</li>
+                        </ul>
+                        <ul>
+                            <p>This rule only applies for Numbered Versions, lettered Versions in between numbered
+                                Versions will
+                                not receive “-Revision” at end. They will however carry Numbered and Lettered Version.
+                                For example:</p>
+                            <li>1764 5th & Columbia Rev 0A – Issued for First Review 20180913</li>
+                            <li>1764 5th & Columbia Rev 0B – Issued for Second Review 20181023</li>
+                        </ul>
+                    </li>
+                </ol>
+
+            </div>
+
+
+            <button class="accordion">Clouding Standards</button>
+            <div class="panel">
+                <ol>
+                    <li>Clouds are allowed to be broken if they interfere with Title Block or Drawing Objects.</li>
+                    <li>Clouding of Lettered and Numbered Versions will be as follows. At every single lettered and
+                        numbered
+                        Version,
+                        it is required to cloud the changes. For example: At Version 0A we’ll cloud changes made to rev
+                        0. At Version
+                        0B,
+                        we will freeze 0A clouds and cloud changes made to Version 0A and so on. At time of Version 1,
+                        we will
+                        unfreeze
+                        all clouds and change all rev triangles to 1. In doing so, we’re controlling changes made from 0
+                        to 1 and will
+                        be
+                        able to know at exactly which point change was made.</li>
+                    <li>Title sheet is to be reved up with every single Version. In case of multiple Table of Contents,
+                        every
+                        single
+                        one is to be included but only reved up if sheets on that particular Table of Contents sheet are
+                        reving up.
+                        Otherwise, Table of Contents sheet is to be included at previous Version if no changes to it.
+                    </li>
+                    <li>If new sheet is added at any Version after 0, it will be given a starting Version of “A” and at
+                        any next
+                        submittal it will have Version 0, even if entire project is at Version 4, for example.</li>
+                    <li>Version cloud inside another Version cloud is not permitted.</li>
+                    <li>Overlapping Version Clouds are not permitted.</li>
+                    <li>Command “DCLO” is to be used instead of “REVCLOUD”.</li>
+                    <li>For Table of Contents;
+                        a. Adding and Removal of the sheets cloud whole line including sheet number, title, version and
+                        version issue
+                        date.
+                        b. Changes made to sheets will be reflected by clouding Version # & Version Issue Date.</li>
+                    <li>All sheets are to be Revved up during Lettered Versions as well as Letter-Number Combo Versions
+                        such as
+                        0A, 0B
+                        etc. Only sheets that were affected by a change are to be Revved up during Numbered Versions.
+                    </li>
+                    <li>Do not leave empty clouds on the drawing.</li>
+                </ol>
+            </div>
+            </p>
+        </div>
+
+        <button class="accordion">General drafting Standards</button>
+        <div class="panel">
+            <button class="accordion">Annotation & Dimensions</button>
+            <div class="panel">
+                <ol>
+                    <li>All Annotative objects including Dimensions shall reside in Model Space. Paper space is reserved
+                        for
+                        Clouding. <span class="red"><strong>[What about section and detail callouts?]</strong>
+                            </span</li> <li>Drawings
+                            are to be purged and zoomed to the extents before closing.</li>
+                    <li>A Leader line cannot be broken, it has to be continuous and at an angle. It cannot be straight.
+                        Best
+                        practice is 45 degrees.</li>
+                    <li>Text Leader need to have left and right attachment of “Middle of Top Line” and be at the same
+                        scale as
+                        dimensions.</li>
+                    <li>Text Leader cannot intersect with dimensions. It needs to be clear where leader is pointing to.
+                    </li>
+                    <li>Use Multi Leader which will have all info preset instead of Leader which does not.</li>
+                    <li>All text including text inside dimensions needs to be the same size.</li>
+                    <li>Dimension precision is to be set to minimum of 1/32”. Anything larger than 1/32” is
+                        unacceptable. <span class="red"><strong>[What about field or submittal
+                                drawings?]</strong></span></li>
+                    <li>While pointing at an edge regular leader is to be used, while pointing to a general area
+                        integral leader
+                        is to
+                        be used.</li>
+                    <li>Crossing of Dimensions shall be avoided for clarity of information.</li>
+                    <li>In crowded drawings use Section Cut Symbol without handles.</li>
+                    <li>For dimensions use 2 decimal places while for angled dimensions use 3 decimal places.</li>
+                    <li>
+                        <ul>
+                            <li>4” Diameter Circle to be shown on all guardrail drawings as representation of code
+                                understanding. </li>
+                            <li>6” Diameter Circle to be shown on all stairs. </li>
+                            <li>For cantilevered stairs be sure to check 6” dia code is met at each angle.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <button class="accordion">Layers</button>
+            <div class="panel">
+                <ol>
+                    <li>All viewports are to be placed on a “.NoPlotViewportBorder” layer.</li>
+                    <li>Layers are not to be forced (all attributes such as color, line type, line thickness and such)
+                        are to be
+                        controlled from layer manager not individually on the ribbon.</li>
+                    <li>Layer naming needs to start with prefix “AB”.</li>
+                    <li>Layer naming needs to be consistent with object it is on. Naming needs to be clear and
+                        explanatory of the
+                        object. For example, AB-TopRail, AB-BasePlate, AB-Post.</li>
+
+                </ol>
+            </div>
+            <button class="accordion">Plotting</button>
+            <div class="panel">
+                <ol>
+                    <li>For Konika Minolta, uncheck double-sided printing. Install a special Konika Minolta driver.</li>
+
+                </ol>
+            </div>
+            <button class="accordion">Drawing Review</button>
+            <div class="panel">
+                <ol>
+                    <li>A self-check is to be performed prior to an any internal and external submittal. Print out a set
+                        of
+                        drawings
+                        when you’re done with them, mark them up. Pick up the marks, make new PDF and do a double check
+                        that all
+                        markups
+                        are
+                        picked up before printing a set for a Cross Check review.</li>
+                    <li>During marking up process one is to use 3 different colors to signify the need for change.
+                        <ul>
+                            <li class="green">Green marker/pen is used for all items that need to be removed from the
+                                project. </li>
+                            <li class="red">Red marker/pen is used for all items with a mistake.</li>
+                            <li class="blue">Blue marker/pen is used for suggestions, items that are not wrong but
+                                should be addressed.
+                            </li>
+                        </ul>
+                    </li>
+
+                </ol>
+            </div>
+            <button class="accordion">Best Practices</button>
+            <div class="panel">
+                <ol>
+                    <li>Sheet Set, Drawings, Revit files as well as any drafting objects need to be placed in common
+                        place for
+                        easier
+                        access.</li>
+                    <li>All Work is to be backed up onto an extra drive for protection of information.</li>
+                    <li>Drawing should never contain PDF imported objects as well as Revit exported objects. It will
+                        cause
+                        slowdowns and
+                        errors in drawings.</li>
+                    <li>For Revit based CAD drawings VISRETAIN command should be set up to 1. VISRETAIN variable 1 will
+                        allow you
+                        to
+                        control layers and will retain them as you save. VISRETAIN variable 0 will revert to layer
+                        states in xref
+                        file.
+                    </li>
+                </ol>
+            </div>
+            <button class="accordion">Submittals</button>
+            <div class="panel">
+                <ol>
+                    <li>All submittals are to be sent in form of PDF.</li>
+                    <li>Every single detail view needs to have a reference point. Exception to this rule are initial
+                        Plan views.
+                    </li>
+                    <li>After completion of a Version, attach latest Version PDF to Smartsheet.</li>
+                    <li>Use 18x24 Cover Sheet & 18x24 Land Sheet Layouts for Drafting. 11x17 may be used for Single
+                        Files, while
+                        8.5x11 may be used for single details.</li>
+                    <li>Every PDF sent out of Drafting Department shall have Proper Name and Date as per Version
+                        Standard 7 & 9. <span class="red"><strong>[Check Section?]</strong></span>
+                    </li>
+                    <li>DWG file naming needs to be consistent and easy to recognize.
+                        <ul>
+                            <li>Example of correct file naming: 1814 Block 21 Stair 11 – Submittal <span
+                                    class="red"><strong>[.dwg?]</strong></span></li>
+                            <li>Example of incorrect file naming: Block 21 Drawing</li>
+                        </ul>
+                    </li>
+                    <li>DWG naming needs to contain either Submittal or Asbuilts in its name.
+                        <ul>
+                            <li>For Example: 1814 Block 21 Stair 11 – Submittal <span
+                                    class="red"><strong>[.dwg?]</strong></span>/ 1814
+                                Block 21 Stair 11 – Asbuilts<span class="red"><strong>[.dwg?]</strong></span></li>
+                        </ul>
+                    </li>
+                    <li>Project Change Tracker Excel Spreadsheet is to be filled out prior to initial design and prior
+                        to any
+                        change to
+                        a drawing.</li>
+
+                </ol>
+            </div>
+        </div>
+        <button class="accordion">Revit Drafting Standards</button>
+        <div class="panel">
+            <button class="accordion">Annotation & Dimensions</button>
+            <div class="panel">
+                <ol>
+                    <li>Unit precision needs to be set to minimum of 1/32”. Anything larger is unacceptable.</li>
+                </ol>
+            </div>
+            <button class="accordion">Exporting Revit Data</button>
+            <div class="panel">
+                <ol>
+                    <li>Revit Section views are to be exported to AutoCAD in 2D or 3D style. Revit files are not to be
+                        imported
+                        into
+                        CAD.</li>
+                    <li>Large CAD files exported from Revit are not to be imported to CAD. Creation of “2D Flatshot” is
+                        needed in
+                        this
+                        case.</li>
+                    <li>Revit exported files are to be loaded into separate drawing due to need of usage of CTB instead
+                        of STB.
+                        This is
+                        due Revit capabilities of only controlling layers thru color.</li>
+                    <li>Revit exported files are to be kept separate from regular CAD files for clarity of information.
+                    </li>
+                    <li>Unit precision needs to be set to minimum of 1/32”. Anything larger is unacceptable.</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="sites.html">Sites</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
+                            class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                            class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12538269622"><i class="fa fa-phone"></i>
+                        1-206-763-2600</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:nadiak@abfabricators.com"><i
+                            class="fa fa-envelope-o"></i> nadiak@abfabricators.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

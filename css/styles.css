@@ -1,0 +1,95 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+  color: darkblue; }
+
+header h2 {
+  color: #CEC8FF; }
+
+.site-footer {
+  background-image: linear-gradient(#CEC8FF, white);
+  padding: 20px 0px; }
+
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  /*background-image: linear-gradient(to right, #5637dd, #3046C5, #60106b); */
+  background-image: linear-gradient(to right, cyan, blue, darkblue, purple);
+  /*background-image: linear-gradient(to right, white, yellow, orange, green, blue, brown,black); */
+  color: white; }
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px; }
+
+.navbar {
+  /*background-color: #901CAD; */
+  background-image: linear-gradient(to right, cyan, blue, darkblue, purple);
+}
+
+.tab-content {
+  border: 1px solid #DDD;
+  border-top: none;
+  padding: 10px; }
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.carousel {
+  border: solid #5637dd; }
+
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+#reserveModal .modal-header {
+  background-color: #17A2B8;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white; }
+
+.bgColor{
+  background-color: red;
+}
+
+.yellowBelt{
+  border-style: solid;
+  border-color: yellow;
+}
+
+.orangeBelt{
+  border-style: solid;
+  border-color: orange;
+}
+
+.greenBelt{
+  border-style: solid;
+  border-color: green;
+}
+
+.blueBelt{
+  border-style: solid;
+  border-color: blue;
+}
+
+.brownBelt{
+  border-style: solid;
+  border-color: brown;
+}
+
+.purpleBelt{
+  border-style: dashed;
+  border-color: purple;
+}
