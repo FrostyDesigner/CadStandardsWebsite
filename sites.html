@@ -39,35 +39,51 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/ab_logo.gif" height="30" width="30" /></a>
+            <a class="navbar-brand" href="index.html"><img src="img/ab_logo.gif" height="30" width="30" /></a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>
+                            Home</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
-                            About</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>
+                    <li class="nav-item"><a class="nav-link" href="sites.html"><i class="fa fa-list fa-lg"></i>
                             Sites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
-                                class="fa fa-address-card fa-lg"></i>
-                            Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle fa-lg"></i>
-                            FAQ</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Standards
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="versionStandards.html"><i
+                                    class="fa fa-book fa-lg"></i>Version Standards</a>
+                            <a class="dropdown-item" href="generalDraftingStandards.html"><i
+                                    class="fa fa-book fa-lg"></i>General Drafting Standards</a>
+                            <a class="dropdown-item" href="revitDraftingStandards.html"><i
+                                    class="fa fa-book fa-lg"></i>Revit Drafting Standards</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Drafting Standards
+                            Tools
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="versionStandards.html"><i class="fa fa-book fa-lg"></i>Version Standards</a>
-                            <a class="dropdown-item" href="generalDraftingStandards.html"><i class="fa fa-book fa-lg"></i>General Drafting Standards</a>
-                            <a class="dropdown-item" href="revitDraftingStandards.html"><i class="fa fa-book fa-lg"></i>Revit Drafting Standards</a>
+                            <a class="dropdown-item" href="spacingCalculator.html"><i class="fa fa-book fa-lg"></i>Spacing
+                                Calculator</a>
+                            <a class="dropdown-item" href="index.html"><i class="fa fa-book fa-lg"></i>Slope
+                                Claculator</a>
                         </div>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle fa-lg"></i>
+                            FAQ</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
+                                class="fa fa-address-card fa-lg"></i>
+                            Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
+                            About</a></li>
 
                 </ul>
                 <span class="navbar-text ml-auto">
@@ -132,72 +148,82 @@
             </div>
         </div>
 
-        <div class="row row-content">
-            <div class="col">
-
-                <div id="accordion3">
-                    <div class="card">
-                        <div role="tab" class="card-header">
-                            <h4>
-                                <a class="collapsed" data-toggle="collapse" data-target="#acc_01">
-                                    CAD Block Sites
-                                </a>
-                            </h4>
-                            <div class="collapse" id="acc_01" data-parent="#accordion3">
-                                <div class="card-body">
-                                    <p class="d-none d-sm-block">Here are some sites where you can download some CAD blocks.</p>
-                                    <div>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div role="tab" class="card-header">
-                            <h4>
-                                <a class="collapsed" data-toggle="collapse" data-target="#bootstrap_judoNW">
-                                    Drafting Calculator Sites
-                                </a>
-                            </h4>
-                            <div class="collapse" id="bootstrap_judoNW" data-parent="#accordion3">
-                                <div class="card-body">
-                                    <p>Here are some sites you can use to calculate some things. Check it out!</p>     
-                                    
-                                    <h3><a href="https://www.portlandbolt.com/technical/tools/bolt-weight-calculator/">Bolt Weight Calculator</a></h3>
-                                    <h3><a href="https://www.calculator.net/slope-calculator.html">Slope Calculator</a></h3>
-                                    <h3><a href="https://www.portlandbolt.com/technical/tools/plate-weight-calculator/">Plate Weight Calculator</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div role="tab" class="card-header">
-                            <h4>
-                                <a class="collapsed" data-toggle="collapse" data-target="#acc_02">
-                                    CAD Tip Sites
-                                </a>
-                            </h4>
-                            <div class="collapse" id="acc_02" data-parent="#accordion3">
-                                <div class="card-body">
-                                    <p class="d-none d-sm-block">Here are some sites where you can download some CAD blocks.</p>
-                                    <div>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3>
-                                            <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a></h3> 
-                                    </div>
-                                </div>
+        <div id="accordion3">
+            <div class="card">
+                <div role="tab" class="card-header">
+                    <h4>
+                        <a data-toggle="collapse" data-target="#acc_01">
+                            CAD Model Sites
+                        </a>
+                    </h4>
+                    <div class="collapse" id="acc_01" data-parent="#accordion3">
+                        <div class="card-body">
+                            <p class="d-none d-sm-block">Here are some sites where you can download some CAD blocks.</p>
+                            <div>
+                                <h3><a href="http://www.crlaurence.com/">Contains blocks/drawings for any CRL parts we
+                                        might use</a></h3>
+                                <h3><a href="https://www.portlandbolt.com/technical/tools/plate-weight-calculator/">Calcs
+                                        weight of a plate</a></h3>
+                                <h3><a href="https://www.mcmaster.com/">Contains blocks of nuts/bolts etc</a></h3>
+                                <h3><a
+                                        href="https://www.cad-steel.com/steel-sections/w-shapes-american-wide-flange-beams">W-shape
+                                        blocks</a></h3>
+                                <h3><a
+                                        href="https://www.cad-steel.com/steel-sections/hss-shapes-rectangular-and-square">HSS
+                                        blocks</a></h3>
+                                <h3><a href="https://www.cad-steel.com/steel-sections/l-shapes">L blocks</a></h3>
+                                <h3><a href="https://www.revitcity.com/index.php">Revit Families</a></h3>
+                                <h3><a href="https://www.cadblocksfree.com/en/3d-cad-models.html">cadblocksfree.com</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div role="tab" class="card-header">
+                    <h4>
+                        <a data-toggle="collapse" data-target="#bootstrap_judoNW">
+                            Drafting Calculator Sites
+                        </a>
+                    </h4>
+                    <div class="collapse" id="bootstrap_judoNW" data-parent="#accordion3">
+                        <div class="card-body">
+                            <p>Here are some sites you can use to calculate some things. Check it out!</p>
+
+                            <h3><a href="https://www.portlandbolt.com/technical/tools/bolt-weight-calculator/">Bolt
+                                    Weight Calculator</a></h3>
+                            <h3><a href="https://www.calculator.net/slope-calculator.html">Slope Calculator</a></h3>
+                            <h3><a href="https://www.portlandbolt.com/technical/tools/plate-weight-calculator/">Plate
+                                    Weight Calculator</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="card">
+            <div role="tab" class="card-header">
+                <h4>
+                    <a data-toggle="collapse" data-target="#acc_02">
+                        CAD Tip Sites
+                    </a>
+                </h4>
+                <div class="collapse" id="acc_02" data-parent="#accordion3">
+                    <div class="card-body">
+                        <p class="d-none d-sm-block">Here are some sites where you can download some CAD blocks.</p>
+                        <div>
+                            <h3><a href="https://www.mcnichols.com/">Perf. Metal</a></h3>
+                            <h3><a href="https://www.cadforum.cz/catalog_en/">Free Blocks</a></h3>
+                            <h3><a href="https://codes.iccsafe.org/content/IBC2018/chapter-10-means-of-egress">IBC
+                                    Code</a></h3>
+                            <h3><a href="https://www.metalsdepot.com/steel-products/steel-rectangle-tube">Metals we can
+                                    order</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <footer class="site-footer">

@@ -40,35 +40,50 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/ab_logo.gif" height="30" width="30" /></a>
+            <a class="navbar-brand" href="index.html"><img src="img/ab_logo.gif" height="30" width="30" /></a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
                     </li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i>
-                            About</a></li>
                     <li class="nav-item"><a class="nav-link" href="sites.html"><i class="fa fa-list fa-lg"></i>
                             Sites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
-                                class="fa fa-address-card fa-lg"></i>
-                            Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle fa-lg"></i>
-                            FAQ</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Standards
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="versionStandards.html"><i
+                                    class="fa fa-book fa-lg"></i>Version Standards</a>
+                            <a class="dropdown-item" href="generalDraftingStandards.html"><i
+                                    class="fa fa-book fa-lg"></i>General Drafting Standards</a>
+                            <a class="dropdown-item" href="revitDraftingStandards.html"><i
+                                    class="fa fa-book fa-lg"></i>Revit Drafting Standards</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Drafting Standards
+                            Tools
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="versionStandards.html"><i class="fa fa-book fa-lg"></i>Version Standards</a>
-                            <a class="dropdown-item" href="generalDraftingStandards.html"><i class="fa fa-book fa-lg"></i>General Drafting Standards</a>
-                            <a class="dropdown-item" href="revitDraftingStandards.html"><i class="fa fa-book fa-lg"></i>Revit Drafting Standards</a>
+                            <a class="dropdown-item" href="spacingCalculator.html"><i
+                                    class="fa fa-book fa-lg"></i>Spacing Calculator</a>
+                            <a class="dropdown-item" href="index.html"><i
+                                    class="fa fa-book fa-lg"></i>Slope Claculator</a>
                         </div>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle fa-lg"></i>
+                            FAQ</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
+                                class="fa fa-address-card fa-lg"></i>
+                            Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
+                            About</a></li>
 
                 </ul>
                 <span class="navbar-text ml-auto">
@@ -197,13 +212,13 @@
                             <div role="tab" class="card-header">
                                 <h4>
                                     <a data-toggle="collapse" data-target="#bootstrap">
-                                        Nedžada Kučokovič <small>CAD Manager</small>
+                                        Nedžada Kučuković <small>CAD Manager</small>
                                     </a>
                                 </h4>
                                 <div class="collapse" id="bootstrap" data-parent="#accordion">
                                     <div class="card-body">
                                         <p>CAD Manager</p>
-                                        <img src="img\Michelangelo.png" height="50" width="50" />
+                                        <img src="img\ladySplinter.jpg" height="50" width="50" />
                                         <a role="button" class="btn btn-link" href="mailto:nadiak@abfabricators.com"><i
                                                 class="fa fa-envelope-o"></i> nadiak@abfabricators.com</a>
                                     </div>
@@ -230,7 +245,7 @@
                             <div role="tab" class="card-header">
                                 <h4>
                                     <a data-toggle="collapse" data-target="#git">
-                                        Alberto Serano <small>Drafter / Architect</small>
+                                        Alberto Serrano <small>Drafter / Architect</small>
                                     </a>
                                 </h4>
                                 <div class="collapse" id="git" data-parent="#accordion">
