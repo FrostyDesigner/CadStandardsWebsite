@@ -16,9 +16,9 @@ function calculate() {
     alert(`Total gap width is ${totalgapWidth}, panel length is ${objectlength}.`)    
 }
 
-function toFeetInches(inches) {
-    let archMeasure = inches / 12
-    return (
-        archMeasure;
-    )
-}
+// function toFeetInches(inches) {
+//     let archMeasure = inches / 12
+//     return (
+//         archMeasure;
+//     )
+// }
