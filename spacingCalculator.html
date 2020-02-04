@@ -146,7 +146,7 @@
 
         <div class="row row-content">
             <div class="col-12">
-                <h2>Spacing Calculator</h2>
+                <h2 id="hello">Spacing Calculator</h2>
                 <p>Use the form below to calculate spacing when you have typical spacing distances.</p>
                 <hr />
             </div>
@@ -174,24 +174,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <!-- <button type="submit" class="btn btn-danger">Do Stuff</button> -->
-                            <button onclick="myFunction()" class="btn btn-danger">Do Stuff</button>
-                            <button onclick="myFunction()">Click me</button>
-                            <button onclick="calculate()">Calculate</button>
-                        </div>
-                    </div>
-                    <h3>Returned Data</h3>
-                    <h4>Total Gap Width is:</h4><h4 id="demo">Test Squid Test</h4>
-                    <h4 id="pnlWdth">Panel Width is: </h4>
-                    <div class="form-group row">
-                        <label for="panelWidthCheck" class="col-md-2 col-form-label">Panel Width to Check</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="panelWidthCheck" name="panelWidthCheck"
-                                placeholder="Panel Width to Check" />
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <div class="col offset-md-2">
                             Is there spacing on either side of the last panels?
                             <div class="form-check form-check-inline">
@@ -204,6 +186,23 @@
                                     value="no" />
                                 <label for="contactNo" class="form-check-label">No</label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="button" onclick="myFunction()" class="btn btn-danger">Do Stuff</button>
+                            <button type="button" onclick="calculate()" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4 id="panelLength">Total Gap Width is:</h4>
+                    <h4 id="pnlWdth">Panel Width is: </h4>
+                    <hr>
+                    <div class="form-group row">
+                        <label for="panelWidthCheck" class="col-md-2 col-form-label">Panel Width to Check</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="panelWidthCheck" name="panelWidthCheck"
+                                placeholder="Panel Width to Check" />
                         </div>
                     </div>
                     <h3>Check Length</h3>
@@ -263,7 +262,7 @@
 
     <script>
         function myFunction() {
-            document.getElementById("demo").innerHTML = "Hello World";
+            document.getElementById("hello").innerHTML = "Hello Nedžada!";
         }
     </script>
 
@@ -288,8 +287,8 @@
             totalgapWidth = gapWidth * (panelQty - 1);
             objectlength = (totalWidth - totalgapWidth) / panelQty;
 
-            alert(`Total gap width is ${totalgapWidth}, panel length is ${objectlength}.`)
-            document.getElementById("demo").innerHTML = `Panel Length is ${objectlength}`;
+            // alert(`Total gap width is ${totalgapWidth}, panel length is ${objectlength}.`)
+            document.getElementById("panelLength").innerHTML = `Total Gap Width is ${objectlength}`;
             document.getElementById("pnlWdth").innerHTML = `Panel Width is ${totalgapWidth}`;
         }
     </script>
