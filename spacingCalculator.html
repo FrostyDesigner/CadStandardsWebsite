@@ -146,8 +146,12 @@
 
         <div class="row row-content">
             <div class="col-12">
-                <h2 id="hello">Spacing Calculator</h2>
-                <p>Use the form below to calculate spacing when you have typical spacing distances.</p>
+                <div class="form-group row">
+                    <h2 id="hello" class="col-sm-6">Spacing Calculator</h2>
+                    <button type="button" onclick="myFunction()" class="btn btn-danger pull-right">Bosanski</button>
+                </div>
+                <p id="bosnian_p">Use the form below to calculate spacing when you have typical spacing distances.</p>
+                <p id="bosnian_p2">Enter the total out to out distance, gap width and number of panels.</p>
                 <hr />
             </div>
             <div class="col-md-10">
@@ -190,7 +194,6 @@
                     </div>
                     <div class="form-group row">
                         <div class="offset-md-2 col-md-10">
-                            <button type="button" onclick="myFunction()" class="btn btn-danger">Do Stuff</button>
                             <button type="button" onclick="calculate()" class="btn btn-primary">Calculate</button>
                         </div>
                     </div>
@@ -262,7 +265,9 @@
 
     <script>
         function myFunction() {
-            document.getElementById("hello").innerHTML = "Hello Nedžada!";
+            document.getElementById("hello").innerHTML = "Zdravo Nedžada!";
+            document.getElementById("bosnian_p").innerHTML = "Upotrijebite donji obrazac za izračun razmaka kada imate tipične razmake.";
+            document.getElementById("bosnian_p2").innerHTML = "Unesite ukupno prema udaljenosti, širini razmaka i broju panela.";
         }
     </script>
 
@@ -288,8 +293,8 @@
             objectlength = (totalWidth - totalgapWidth) / panelQty;
 
             // alert(`Total gap width is ${totalgapWidth}, panel length is ${objectlength}.`)
-            document.getElementById("panelLength").innerHTML = `Total Gap Width is ${objectlength}`;
-            document.getElementById("pnlWdth").innerHTML = `Panel Width is ${totalgapWidth}`;
+            document.getElementById("panelLength").innerHTML = `Total Gap Width is ${totalgapWidth}`;
+            document.getElementById("pnlWdth").innerHTML = `Panel Width is ${objectlength}`;
         }
     </script>
     <!-- endbuild -->
